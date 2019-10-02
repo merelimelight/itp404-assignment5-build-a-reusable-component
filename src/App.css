@@ -1,22 +1,43 @@
-.App {
+body
+{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+#animation
+{
+  background-color: rgb(197, 197, 197);
+  margin: 100px;
+  padding-bottom: 20px;
+  padding-top: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#text
+{
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
 }
 
-.App-link {
-  color: #09d3ac;
+@keyframes myAnimation
+  {
+    0%{
+      opacity: 1;
+      transform: rotateX(90deg);
+    }
+    50%{
+      opacity: 0.5;
+      transform: rotateX(0deg);
+    }
+    100%{
+      display: none;
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+  }
+
+#text:active
+{
+  animation-name: myAnimation;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
 }
